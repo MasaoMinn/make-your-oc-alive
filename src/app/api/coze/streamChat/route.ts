@@ -4,7 +4,7 @@ import { CozeAPI, RoleType } from "@coze/api";
 
 export async function GET(req: NextRequest) {
   const apiClient = new CozeAPI({
-    token: "pat_ZxD2ADY9kHsNsLGL3LeSSmowhqxsJEyeGHXHfzbYjkqQTIvcI2SMO86IJ330jGD7", // 你的令牌
+    token: process.env.COZE_API_TOKEN!, // 你的令牌
     baseURL: 'https://api.coze.cn'
   });
 

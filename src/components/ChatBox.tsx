@@ -79,11 +79,12 @@ export default function ChatBox({
           <Button
             onClick={sendMultimodalChat}
             disabled={currentState === 'loading'}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center gap-2"
+            variant='info'
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded flex items-center gap-2 mx-auto w-100"
           >
             {currentState === 'loading' ? (
               <>
-                <span className="inline-block animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent text-white"></span>
+                <span className="inline-block animate-spin rounded-full h-4 w-4 border-2 border-current border-t-transparent"></span>
                 处理中...
               </>
             ) : (

@@ -295,29 +295,10 @@ const ImageUploader: React.FC = () => {
         )}
 
         {state.uploadResponse && !state.error && (
-          <div className="bg-green-50 border-2 border-green-200 p-5 rounded-lg shadow-sm mt-6 mx-auto max-w-md">
-            {state.uploadResponse.data && (
-              <div className="space-y-2 text-sm text-gray-700 bg-white rounded p-4 border border-green-100">
-                <p><strong>文件ID:</strong> {state.uploadResponse.data.id}</p>
-                <p><strong>文件大小:</strong> {state.uploadResponse.data.size}</p>
-                {state.uploadResponse.data.name && (
-                  <p><strong>文件名:</strong> {state.uploadResponse.data.name}</p>
-                )}
-                {state.uploadResponse.data.created_at && (
-                  <p>
-                    <strong>创建时间:</strong>
-                    {new Date(state.uploadResponse.data.created_at * 1000).toLocaleString()}
-                  </p>
-                )}
-                <p className="text-green-600"><strong>服务器消息:</strong> {state.uploadResponse.msg}</p>
-              </div>
-            )}
-
-            {!state.uploadResponse.data && (
-              <p className="text-sm text-gray-700">
-                <strong>服务器消息:</strong> {state.uploadResponse.msg}
-              </p>
-            )}
+          <div className="bg-green-50 border-2 border-green-200 p-5 rounded-lg shadow-sm mt-6 mx-auto max-w-md text-center">
+            <p className="text-sm text-gray-700">
+              <strong>服务器消息:</strong> {state.uploadResponse.msg}
+            </p>
           </div>
         )}
       </div>
